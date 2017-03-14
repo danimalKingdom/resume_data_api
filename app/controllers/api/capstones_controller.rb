@@ -1,4 +1,5 @@
-class CapstonesController < ApplicationController
+class Api::CapstonesController < ApplicationController
+
   def create
 
     @capstone = Experience.new(
@@ -34,6 +35,8 @@ class CapstonesController < ApplicationController
 
     @capstone.destroy
   end
+end
+
 end
 
 end
