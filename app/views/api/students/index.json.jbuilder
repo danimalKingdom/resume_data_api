@@ -41,7 +41,7 @@ json.array! @students do |student|
     end
 
 
-    json.skills students.skills.each do |skill|
+    json.skills student.skills.each do |skill|
       json.skill_name skill.skill_name
     end
 end
