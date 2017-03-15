@@ -26,6 +26,11 @@ Rails.application.routes.draw do
 		patch "/capstones/:id" => "capstones#edit"
 		delete "/capstones" => "capstones#destroy"
 
+		#skills 
+	    get "/skills" => "skills#index"
+		get "/skills/:id" => "skills#show"
+		patch "/skills/:id" => "skills#edit"
+		delete "/skills" => "skills#destroy"
 	end
 end
 

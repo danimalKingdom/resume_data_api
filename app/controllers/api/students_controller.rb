@@ -1,7 +1,7 @@
 class Api::StudentsController < ApplicationController
 	def index
 		@students = Student.all
-		return @students
+		render "index.json.jbuilder"
 	end
 
 	def show
