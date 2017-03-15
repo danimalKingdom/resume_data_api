@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   		#students
 		get "/students" => "students#index"
 		get "/students/:id" => "students#show"
-		patch "/students/:id" => "students#edit"
+		patch "/students/:id" => "students#update"
 		delete "/students" => "students#destroy"
 
 	    #experiences
