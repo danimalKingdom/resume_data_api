@@ -23,13 +23,13 @@ Rails.application.routes.draw do
 	    #capstones
 	   get "/capstones" => "capstones#index"
 		get "/capstones/:id" => "capstones#show"
-		patch "/capstones/:id" => "capstones#edit"
+		patch "/capstones/:id" => "capstones#update"
 		delete "/capstones" => "capstones#destroy"
 
 		#skills 
 	    get "/skills" => "skills#index"
 		get "/skills/:id" => "skills#show"
-		patch "/skills/:id" => "skills#edit"
+		patch "/skills/:id" => "skills#update"
 		delete "/skills" => "skills#destroy"
 	end
 end
