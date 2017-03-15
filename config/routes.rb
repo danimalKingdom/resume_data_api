@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 	    #experiences
 	    post "/experiences" => "experiences#create"
 	    patch "/experiences/:id" => "experiences#update"
-	    delete "/experiences/:id" => "experiences#destroy"
+	    delete "/experiences" => "experiences#destroy"
 
 
 	    #Educations
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 	    delete "/educations" => "educations#destroy"
 
 	    #capstones
-	    get "/capstones" => "capstones#index"
+	   get "/capstones" => "capstones#index"
 		get "/capstones/:id" => "capstones#show"
 		patch "/capstones/:id" => "capstones#edit"
 		delete "/capstones" => "capstones#destroy"

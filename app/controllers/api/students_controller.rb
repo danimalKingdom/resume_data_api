@@ -6,6 +6,7 @@ class Api::StudentsController < ApplicationController
 
 	def show
 		@student = Student.find_by(id: params[:id])
+		render "show.json.jbuilder"
 	end
 
 	def update
@@ -35,6 +36,6 @@ class Api::StudentsController < ApplicationController
 
 	def destroy
 		student = Student.find_by(id: params[:id])
-    	student.destroy
+    student.destroy
 	end
 end
