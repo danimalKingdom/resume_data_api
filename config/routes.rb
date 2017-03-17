@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
 	    #Educations
 	    post "/educations" => "educations#create"
-	    patch "/educations" => "educations#update"
+	    patch "/educations/:id" => "educations#update"
 	    delete "/educations" => "educations#destroy"
 
 	    #capstones
