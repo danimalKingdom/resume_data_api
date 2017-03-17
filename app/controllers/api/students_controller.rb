@@ -9,6 +9,12 @@ class Api::StudentsController < ApplicationController
 		render "show.json.jbuilder"
 	end
 
+	def typereturn
+		@students = Student.all
+		
+		render "studentname.json.jbuilder"	
+	end
+
 	def update
 		@student = Student.find_by(id: params[:id])
 		

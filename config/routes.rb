@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   		#students
 		get "/students" => "students#index"
+		get "/students/names" => "students#typereturn"
 		get "/students/:id" => "students#show"
 		patch "/students/:id" => "students#update"
 		delete "/students" => "students#destroy"
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
 	    delete "/educations" => "educations#destroy"
 
 	    #capstones
-	   get "/capstones" => "capstones#index"
+	   	get "/capstones" => "capstones#index"
 		get "/capstones/:id" => "capstones#show"
 		patch "/capstones/:id" => "capstones#update"
 		delete "/capstones" => "capstones#destroy"
