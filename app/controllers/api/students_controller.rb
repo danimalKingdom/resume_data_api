@@ -9,6 +9,15 @@ class Api::StudentsController < ApplicationController
 		render "show.json.jbuilder"
 	end
 
+	def email
+		if params[:email]
+			@student = Student.find_by(email: params[:email])
+			render "show.json.jbuilder"
+		else
+			render json: {error: "Not Found"}
+		end
+	end
+
 	def typereturn
 		@students = Student.all
 		
