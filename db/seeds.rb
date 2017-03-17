@@ -54,6 +54,7 @@ students.each do |x|
     ])
   end
 
+
   1.times do
     Skill.create!([
       skill_name: "Ruby on Rails",
@@ -61,5 +62,13 @@ students.each do |x|
     ])
   end
 end
+
+
+Experience.create(start_date: "Birth",
+    end_date: "STILL EATING TRASH",
+    job_title: "The Trash Man",
+    company_name: "Sunny Wrestling",
+    details: "I EAT TRASH!",
+    student_id: 1)
 
 
