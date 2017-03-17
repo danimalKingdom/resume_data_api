@@ -2,7 +2,7 @@ class Api::CapstonesController < ApplicationController
 
   def create
 
-    @capstone = Experience.new(
+    @capstone = Capstone.new(
      name: params[:name],
      description: params[:description],
      url: params[:job_title],
@@ -21,9 +21,9 @@ class Api::CapstonesController < ApplicationController
   end
 
   def update
-    @capstone = Experience.find_by(id: params[:id])
+    @capstone = Capstone.find_by(id: params[:id])
 
-    @capstone = Experience.update(
+    @capstone.update(
 	 name: params[:name],
      description: params[:description],
      url: params[:job_title],
@@ -36,7 +36,7 @@ class Api::CapstonesController < ApplicationController
   end
 
   def destroy
-    @capstone = Experience.find_by(id: params[:id])
+    @capstone = Capstone.find_by(id: params[:id])
 
     @capstone.destroy
   end
