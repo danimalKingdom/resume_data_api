@@ -16,6 +16,7 @@
 
 
     json.capstones @student.capstones.each do |capstone|
+      json.id capstone.id
       json.name capstone.name
       json.description capstone.description
       json.url capstone.url
@@ -24,6 +25,7 @@
 
 
     json.educations @student.educations.each do |education|
+      json.id education.id
       json.start_date education.start_date
       json.end_date education.end_date
       json.degree education.degree
@@ -33,6 +35,7 @@
 
 
     json.experiences @student.experiences.each do |experience|
+      json.id experience.id
       json.start_date experience.start_date
       json.end_date experience.end_date
       json.job_title experience.job_title
@@ -42,5 +45,6 @@
 
 
     json.skills @student.skills.each do |skill|
+      json.id skill.id
       json.skill_name skill.skill_name
     end
