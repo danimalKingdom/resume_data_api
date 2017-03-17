@@ -1,4 +1,4 @@
-class CapstonesController < ApplicationController
+ class CapstonesController < ApplicationController
   def create
 
     @capstone = Experience.new(

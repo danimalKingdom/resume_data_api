@@ -1,0 +1,63 @@
+
+foods = ["salad","sphagetti","pizza","Swedish" "meatballs", "mac and cheese"]
+
+
+count = 0
+
+foods.each do |food|
+
+puts "i love" food[count]
+
+end 
+
+
+
+count = 0
+
+foods.each do |food|
+
+puts food[count]
+
+end 
+
+
+count = 0
+
+10.times do
+
+	count + 1 
+
+end 
+
+
+names = {"first_name" => "Joan", "last_name" => "Kelson" "Email" => ""}
+
+5.times do 
+
+	
+	puts "First Name:": + #{"first_name"}  
+	puts "Last Name:" + #{"last_name"}  
+	puts "Email:" + #{"first_name"} + #{"last_name"} +"@gmail.com" 
+	puts "Account:" + rand(1..200)
+
+
+end 
+
+
+groups = {"Hermione Seamus" => "Jacob and lisa", "Lucius Cho" => "Mike and Bonolo", "Sirius Luna" =>"Neo and Sarah", "Severus Draco" => "John and Jack"}
+
+count = 0
+
+groups.each do |group|
+
+puts "Group" + groups.[count][count]
+
+	count + 1 
+
+end 
+
+
+
+
+
+

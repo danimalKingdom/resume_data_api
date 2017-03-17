@@ -16,6 +16,7 @@ Student.create!([
   {first_name: "Andrew ", last_name: "Taylor", email: "andrew@andrew.com", password: "password", phone_number: "1-945-971-7686", short_bio: "You know, that little droid is going to cause me a lot of trouble.", linkedin_url: "linkedin.com/schinner", twitter_handle: "twitter.com/master", website_url: "fadelhettinger.name", online_resume_url: "schmeler.io", github_url: "github.com/danimalkingdom", photo: "https://robohash.org/istequisquameos.png?size=300x300&set=set1"}
 ])
 
+
  
 
 students = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
