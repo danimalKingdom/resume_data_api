@@ -1,4 +1,5 @@
 Student.create!([
+
   {first_name: "Luke", last_name: "O'Connor", email: "luke@luke.com", password: "password", phone_number: "1-503-078-9934", short_bio: "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering.", linkedin_url: "linkedin.com/nicolas", twitter_handle: "twitter.com/try-hard", website_url: "harris.name", online_resume_url: "bechtelar.info", github_url: "github.com/danimalkingdom", photo: "https://robohash.org/remomnisipsum.png?size=300x300&set=set1"},
   {first_name: "Annie", last_name: "Wong", email: "annie@annie.com", password: "password", phone_number: "1-246-722-9332", short_bio: "Truly wonderful, the mind of a child is.", linkedin_url: "linkedin.com/mosciski", twitter_handle: "twitter.com/franzen", website_url: "pouros.org", online_resume_url: "cronahyatt.com", github_url: "github.com/danimalkingdom", photo: "https://robohash.org/nullaenimillo.png?size=300x300&set=set1"},
   {first_name: "Jenilee", last_name: "Hsu", email: "jenilee@jenilee.com", password: "password", phone_number: "1-370-137-2715", short_bio: "You know, that little droid is going to cause me a lot of trouble.", linkedin_url: "linkedin.com/keelingklocko", twitter_handle: "twitter.com/post-ironic", website_url: "schulistschumm.com", online_resume_url: "pfeffer.info", github_url: "github.com/danimalkingdom", photo: "https://robohash.org/euminerror.png?size=300x300&set=set1"},
@@ -14,3 +15,51 @@ Student.create!([
   {first_name: "Carlos", last_name: "Parilla", email: "carlos@carlos.com", password: "password", phone_number: "115-335-5484", short_bio: "Do. Or do not. There is no try.", linkedin_url: "linkedin.com/swaniawski", twitter_handle: "twitter.com/cornhole", website_url: "hills.co", online_resume_url: "farrellkautzer.org", github_url: "github.com/danimalkingdom", photo: "https://robohash.org/consequaturestvero.png?size=300x300&set=set1"},
   {first_name: "Andrew ", last_name: "Taylor", email: "andrew@andrew.com", password: "password", phone_number: "1-945-971-7686", short_bio: "You know, that little droid is going to cause me a lot of trouble.", linkedin_url: "linkedin.com/schinner", twitter_handle: "twitter.com/master", website_url: "fadelhettinger.name", online_resume_url: "schmeler.io", github_url: "github.com/danimalkingdom", photo: "https://robohash.org/istequisquameos.png?size=300x300&set=set1"}
 ])
+
+ 
+
+students = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+students.each do |x|
+  2.times do
+    poke_name = Faker::Pokemon.name
+    Capstone.create!([
+      name: poke_name,
+      description: Faker::Pokemon.location,
+      url: "#{poke_name}.com",
+      screenshot: Faker::Avatar.image,
+      student_id: x
+    ])
+  end
+  
+  2.times do
+    Education.create!([
+      start_date: Faker::Date.backward,
+      end_date: Faker::Date.forward,
+      degree: Faker::Educator.course,
+      university_name: Faker::Educator.university,
+      details: Faker::Educator.campus,
+      student_id: x
+    ])
+  end
+
+  4.times do
+    Experience.create!([
+      start_date: Faker::Date.backward,
+      end_date: Faker::Date.forward,
+      job_title: Faker::Company.profession,
+      company_name: Faker::Company.name,
+      details: Faker::Company.bs,
+      student_id: x
+    ])
+  end
+
+  1.times do
+    Skill.create!([
+      skill_name: "Ruby on Rails",
+      student_id: x
+    ])
+  end
+end
+
+
