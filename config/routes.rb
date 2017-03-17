@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   		#students
 		get "/students" => "students#index"
 		get "/students/names" => "students#typereturn"
+		get "/students/email" => "students#email"
 		get "/students/:id" => "students#show"
+		get "/students/" => "students#show"
 		patch "/students/:id" => "students#update"
 		delete "/students" => "students#destroy"
 
