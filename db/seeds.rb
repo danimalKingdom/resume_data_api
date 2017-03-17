@@ -15,47 +15,4 @@ Student.create!([
   {first_name: "Andrew ", last_name: "Taylor", email: "andrew@andrew.com", password_digest: "$2a$10$YfgJ4AQx4/sVT2zT9HJl2ONC0MLZXl44ZM4ULkCvJ5SL/j6s8hoRa", phone_number: "1-945-971-7686", short_bio: "You know, that little droid is going to cause me a lot of trouble.", linkedin_url: "linkedin.com/schinner", twitter_handle: "twitter.com/master", website_url: "fadelhettinger.name", online_resume_url: "schmeler.io", github_url: "github.com/danimalkingdom", photo: "https://robohash.org/istequisquameos.png?size=300x300&set=set1"}
 ])
 
-students = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-
-students.each do |x|
-  2.times do
-    poke_name = Faker::Pokemon.name
-    Capstone.create!([
-      name: poke_name,
-      description: Faker::Pokemon.location,
-      url: "#{poke_name}.com",
-      screenshot: Faker::Avatar.image,
-      student_id: x
-    ])
-  end
-  
-  2.times do
-    Education.create!([
-      start_date: Faker::Date.backward,
-      end_date: Faker::Date.forward,
-      degree: Faker::Educator.course,
-      university_name: Faker::Educator.university,
-      details: Faker::Educator.campus,
-      student_id: x
-    ])
-  end
-
-  4.times do
-    Experience.create!([
-      start_date: Faker::Date.backward,
-      end_date: Faker::Date.forward,
-      job_title: Faker::Company.profession,
-      company_name: Faker::Company.name,
-      details: Faker::Company.bs,
-      student_id: x
-    ])
-  end
-
-  1.times do
-    Skill.create!([
-      skill_name: "Ruby on Rails",
-      student_id: x
-    ])
-  end
-end
 
