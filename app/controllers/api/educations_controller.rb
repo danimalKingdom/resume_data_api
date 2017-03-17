@@ -10,6 +10,9 @@ class Api::EducationsController < ApplicationController
 			university_name: params [:university_name], 
 			details: params [:details] 
 		)
+
+		    redirect_to "/students/#{params[:student_id]}"
+
 	end 
 
 	if @education.save 
@@ -30,6 +33,9 @@ class Api::EducationsController < ApplicationController
 			university_name: params [:university_name], 
 			details: params [:details] 
 		)
+
+		    redirect_to "/students/#{params[:student_id]}"
+
 	end 
 
 	def destroy 

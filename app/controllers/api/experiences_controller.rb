@@ -16,6 +16,7 @@ class Api::ExperiencesController < ApplicationController
       if_saved = false
     end
 
+    redirect_to "/students/#{params[:student_id]}"
 
   end
 
@@ -30,6 +31,8 @@ class Api::ExperiencesController < ApplicationController
      details: params[:details],
      student_id: params[:student_id]
      )
+
+    redirect_to "/students/#{params[:student_id]}"
 
   end
 

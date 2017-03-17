@@ -14,6 +14,8 @@ class Api::CapstonesController < ApplicationController
       else
       if_saved = false
     end
+        redirect_to "/students/#{params[:student_id]}"
+
 
 
   end
@@ -27,6 +29,9 @@ class Api::CapstonesController < ApplicationController
      url: params[:job_title],
      snapshot: params[:shapshot],
      )
+
+        redirect_to "/students/#{params[:student_id]}"
+
 
   end
 

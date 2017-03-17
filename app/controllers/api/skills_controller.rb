@@ -4,6 +4,9 @@ class Api::SkillsController < ApplicationController
 	     skill_name: params[:skill_name],
 	     student_id: params[:student_id]
 	     )
+
+          redirect_to "/students/#{params[:student_id]}"
+
 	end
 
   def update
@@ -13,6 +16,9 @@ class Api::SkillsController < ApplicationController
      skill_name: params[:skill_name],
      student_id: params[:student_id]
      )
+
+        redirect_to "/students/#{params[:student_id]}"
+
 
   end
 
