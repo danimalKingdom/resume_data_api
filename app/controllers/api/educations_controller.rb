@@ -25,7 +25,7 @@ class Api::EducationsController < ApplicationController
 	def update 
 
 		@education = Education.find_by(id: params[:id])
-		@education = Education.update(
+		@education.update(
 			student_id: params [:student_id]
 			start_name: params [:start_name], 
 			end_date: params [:end_date],
