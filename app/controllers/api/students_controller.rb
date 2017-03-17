@@ -16,7 +16,6 @@ class Api::StudentsController < ApplicationController
 		first_name: params[:first_name],
 		last_name: params[:last_name],
 		email: params[:email],
-		password: params[:password],
 		phone_number: params[:phone_number],
 		short_bio: params[:short_bio],
 		linkedin_url: params[:linkedin_url],
